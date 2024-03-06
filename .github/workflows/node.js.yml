@@ -12,15 +12,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Set up Node
+      - name: Set up Node
         uses: actions/setup-node@v3
         with:
           node-version: "20"
 
-    - name: Use Node.js ${{ matrix.node-version }} || Rodei o node
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: node index.js
+      - name: Use Node.js ${{ matrix.node-version }} || Rodei o node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - run: node index.js
 
