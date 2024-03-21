@@ -5,7 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: "main"
+    branches: 
+      - "main" #prod
+      - "test"
 
 jobs:
   build-ci:
@@ -19,6 +21,12 @@ jobs:
         with:
           node-version: 20
 
-      - run: |
+      - name: Deploy to production
+        if: github.ref == 'refs/heads/main'
+        run: |
           node index.js
 
+      - name: Deploy to test
+        if: github.ref == 'refs/heads/test'      
+        run: |
+          node index.js
