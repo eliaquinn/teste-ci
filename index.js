@@ -1,5 +1,5 @@
 function teste() {
-    console.log("Olá Mundo!");
+    console.log("*****************DEV CI*********************");
 }
 
 teste();
