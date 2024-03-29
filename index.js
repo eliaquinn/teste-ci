@@ -1,5 +1,7 @@
-function teste() {
-    console.log("*****************VINDO PELA DEV*********************");
+const { development } = require('./src/app');
+
+function index() {
+    development()
 }
 
-teste();
+index();
