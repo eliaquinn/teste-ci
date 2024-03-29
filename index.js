@@ -1,5 +1,14 @@
-function teste() {
-    console.log("*****************VINDO PELA DEV*********************");
+const { development, production } = require('./src/app');
+
+function indexDev() {
+    development()
 }
 
-teste();
+function indexProd() {
+    production()
+}
+
+module.exports = {
+    indexDev,
+    indexProd
+}
