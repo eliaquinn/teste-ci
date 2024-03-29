@@ -1,14 +1,7 @@
-const { development, production } = require('./src/app');
+const { development } = require('./src/app');
 
-function indexDev() {
+function index() {
     development()
 }
 
-function indexProd() {
-    production()
-}
-
-module.exports = {
-    indexDev,
-    indexProd
-}
+index();

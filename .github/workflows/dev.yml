@@ -20,6 +20,6 @@ jobs:
         with:
           node-version: 20
 
-      - name: Deploy to production
+      - name: Deploy to development
         run: |
           npm run dev
