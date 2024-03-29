@@ -1,5 +1,5 @@
 function teste() {
-    console.log("*****************DEV CI*********************");
+    console.log("*****************BUILD INIT DEV*********************");
 }
 
 teste();

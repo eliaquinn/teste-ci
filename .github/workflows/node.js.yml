@@ -7,7 +7,6 @@ on:
   push:
     branches: 
       - "main" #prod
-      - "test"
 
 jobs:
   build-ci:
@@ -22,11 +21,15 @@ jobs:
           node-version: 20
 
       - name: Deploy to production
-        if: github.ref == 'refs/heads/main'
         run: |
           node index.js
 
-      - name: Deploy to test
-        if: github.ref == 'refs/heads/test'      
-        run: |
-          node index.js
+      # - name: Deploy to production
+      #   if: github.ref == 'refs/heads/main'
+      #   run: |
+      #     node index.js
+
+      # - name: Deploy to test
+      #   if: github.ref == 'refs/heads/test'      
+      #   run: |
+      #     node index.js
