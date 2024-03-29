@@ -1,12 +1,12 @@
 # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 
-name: Node.js CI
+name: Node.js CI Production Environment
 
 on:
   push:
     branches: 
-      - "main" #prod
+      - "main"
 
 jobs:
   build-ci:
@@ -22,14 +22,4 @@ jobs:
 
       - name: Deploy to production
         run: |
-          node index.js
-
-      # - name: Deploy to production
-      #   if: github.ref == 'refs/heads/main'
-      #   run: |
-      #     node index.js
-
-      # - name: Deploy to test
-      #   if: github.ref == 'refs/heads/test'      
-      #   run: |
-      #     node index.js
+          npm run prod
