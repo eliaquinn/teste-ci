@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node -e require('./index').indexDev()",
-    "prod": "node -e require('./index').indexProd()"
+    "dev": "node index.js",
+    "prod": "node prod.js"
   },
   "keywords": [],
   "author": "",
